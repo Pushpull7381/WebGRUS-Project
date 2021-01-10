@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question 1</title>
+    <style>
+      body{
+      background-color: rgb(67,24,24);
+      }
+      h1{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        text-align: center;
+        font-size: 50px;
+        color: rgb(239,174,103);
+      }
+      p{
+        text-align: center;
+      }
+      #select_A ,#select_B{
+        background-color: rgb(67,24,24);
+        border-color: rgb(239,174,103);
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+
+      }
+    </style>
+    <script>
+      var typeI = 0;
+      var typeE = 0;
+      function buttonClick(){
+        window.open("question2.html")
+      }
+    </script>
+  </head>
+  <body>
+    <h1>오늘은 드디어 첫 녹화날!<br> 스튜디오에서의 나는 ... </h1>
+    <p><input id="select_A" type="button" value= "하 너무 떨린다…. 잘 할수 있을까…? 말도 잘 못꺼낼거같은데…" onclick="typeI= typeI+1; buttonClick()"></p>
+    <p><input id="select_B" type="button" value= "첫 녹화 당당하게 도전~. 난 자신있어~ 사람들 앞에서 입좀 털어볼까?" onclick="typeE= typeE+1; buttonClick()"></p>
+  </body>
+</html>

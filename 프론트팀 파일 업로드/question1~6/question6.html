@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question 6</title>
+    <style>
+      body{
+      background-color: rgb(67,24,24);
+      }
+      h1{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        text-align: center;
+        font-size: 50px;
+        color: rgb(239,174,103);
+      }
+      p{
+        text-align: center;
+      }
+      #select_A ,#select_B{
+        background-color: rgb(67,24,24);
+        border-color: rgb(239,174,103);
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+
+      }
+    </style>
+    <script>
+      var typeI = 0;
+      var typeE = 0;
+      function buttonClick(){
+        window.open("question7.html")
+      }
+    </script>
+  </head>
+  <body>
+    <h1>배가고파서 차타고 맛집을 찾고있는 당신!<br>이 때 매니저가 길을 모른다고 하는데, 당신은?</h1>
+    <p><input id="select_A" type="button" value= "쭉 내려가서 왼쪽으로 돌면 돼요 !" onclick="typeI= typeI+1; buttonClick()"></p>
+    <p><input id="select_B" type="button" value= "100m 직진해서 편의점 끼고 우회전 해주세요!" onclick="typeE= typeE+1; buttonClick()"></p>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question 3</title>
+    <style>
+      body{
+      background-color: rgb(67,24,24);
+      }
+      h1{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        text-align: center;
+        font-size: 50px;
+        color: rgb(239,174,103);
+      }
+      p{
+        text-align: center;
+      }
+      #select_A ,#select_B{
+        background-color: rgb(67,24,24);
+        border-color: rgb(239,174,103);
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+
+      }
+    </style>
+    <script>
+      var typeI = 0;
+      var typeE = 0;
+      function buttonClick(){
+        window.open("question4.html")
+      }
+    </script>
+  </head>
+  <body>
+    <h1>연인과 길을 걷다 연인의 동창을 만났다!<br>이때의 나는 ...</h1>
+    <p><input id="select_A" type="button" value= "마치 알던 사이인 것처럼 같이 이야기를 나눈다." onclick="typeI= typeI+1; buttonClick()"></p>
+    <p><input id="select_B" type="button" value= "난 투명인간이야... 땅만 보고 대화가 끝나기를 기다린다." onclick="typeE= typeE+1; buttonClick()"></p>
+  </body>
+</html>
