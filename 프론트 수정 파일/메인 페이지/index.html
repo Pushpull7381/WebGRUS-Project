@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MBTI</title>
+    <link rel="stylesheet" href="style1.css"/>
+    <style type="text/css">
+
+@font-face {
+     font-family:"NanumSquareRoundEB";
+     src:url("font/NanumSquareRoundEB.ttf") format("truetype");
+     font-style:normal;
+     font-weight:normal;
+     letter-spacing: 5px;
+}
+@font-face {
+     font-family:"nanumsquareroundb";
+     src:url("font/nanumsquareroundb.ttf") format("truetype");
+     font-style:normal;
+     font-weight:normal;
+}
+body {
+     font-family:NanumSquareRoundEB;
+     font-size:25px;
+}
+
+</style>
+  </head>
+  <body id="firstPageBody">
+    <h1 id="firstPageH1">당신의 MBTI와 <br><div id="colorChange"> 비슷한 캐릭터를</div>찾아보세요!</h1>
+    <form class="js-form form">
+      <input type="text" placeholder="이름을 입력하세요." style="text-align:center; width:200px; height:30px; letter-spacing: 1px"/>
+    </form>
+    <h4 class="js-greetings  greetings"></h4>
+      <p><a id="firstPageA" href="question1.html">START!</a></p>
+    <script src="name.js"></script>
+  </body>
+</html>
