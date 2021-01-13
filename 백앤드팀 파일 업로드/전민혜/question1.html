@@ -1,0 +1,174 @@
+<?php
+session_start();
+include "connect.php";
+$dlfma=$_POST['dlfma'];
+
+$sql="INSERT INTO topic (E, I, N, S, F, T, P, J, name, time) VALUES('0', '0', '0', '0', '0', '0', '0', '0', '{$dlfma}', CURRENT_TIMESTAMP);";
+$result=mysqli_query($conn, $sql);
+$resultt=mysqli_query($conn,"SELECT * FROM topic WHERE name = '{$dlfma}' and rand='0';");
+$roww=mysqli_fetch_array($resultt);
+$id=$roww['id'];
+$time=$roww['time'];
+
+
+$resulttt=mysqli_query($conn,"SELECT * FROM topic WHERE name = '{$dlfma}' and id ='{$id}' and time='{$time}';");
+$row=mysqli_fetch_array($resulttt);
+$id=$row['id'];
+
+$sql="UPDATE topic set rand=cast(RAND()*10000 as unsigned) where time='{$time}';";
+$result=mysqli_query($conn, $sql);
+
+
+$resultt=mysqli_query($conn,"SELECT * FROM topic WHERE name = '{$dlfma}' and E=0 and I=0 and N=0 and S=0 and F=0 and T=0 and P=0 and J=0 and time='{$time}' and rand!='0';");
+$row=mysqli_fetch_array($resultt);
+
+$N=$row['name'];
+$rand=$row['rand'];
+
+?>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question1</title>
+    <style type="text/css">
+
+@font-face {
+     font-family:"NanumSquareRoundEB";
+     src:url("font/NanumSquareRoundEB.ttf") format("truetype");
+     font-style:normal;
+     font-weight:normal;
+     letter-spacing: 5px;
+}
+@font-face {
+     font-family:"nanumsquareroundb";
+     src:url("font/nanumsquareroundb.ttf") format("truetype");
+     font-style:normal;
+     font-weight:normal;
+}
+body {
+     font-family:NanumSquareRoundEB;
+     font-size:30px;
+}
+button {
+     font-family:nanumsquareroundb;
+}
+
+</style>
+    <style>
+    #firstPageBody{
+      background-color: black;
+      background-image: url("영화배경.png");
+      background-size: 100% 200%;
+    }
+    #firstPageH1{
+      margin-top: 100px;
+      margin-bottom: 100px;
+      color:white;
+      text-align: center;
+      font-size: 250%;
+    }
+    #colorChange{
+      color: rgb(239,174,103);
+    }
+    .form,
+    .name{
+      display: none;
+    }
+    .showing{
+      text-align: center;
+      display: block;
+    }
+    h4{
+      color:white;
+      font-size: 30px;
+    }
+    #firstPageA{
+      font-size: 150%;
+      text-decoration: none;
+      color:white;
+      background-color: rgb(239,174,103);
+      display: inline-block;
+      padding: 20px 60px;
+    }
+    .QuestionBody{
+      background-color:black;
+    }
+    .Question{
+      text-align: center;
+      margin-top: 50px;
+      color:white;
+      font-size:170%;
+      letter-spacing: 5px;
+    }
+    p{
+      text-align: center;
+      margin: 50px;
+    }
+    .NextButton{
+      font-size: 100%;
+      text-decoration: none;
+      color:white;
+      background-color: rgb(239,174,103);
+      display: inline-block;
+      padding: 15px 50px;
+    }
+    .button {
+      background-color: rgb(239,174,103);
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      font-size: 20px;
+      margin: 4px 2px;
+
+      cursor: pointer;
+      }
+      .button1 {
+        background-color: black;
+        color: white;
+        width: 500px;
+        height: 100px;
+        letter-spacing: 3px;
+        border: 2px solid rgb(239,174,103);
+        }
+      .button1:hover {
+          background-color: rgb(239,174,103);
+          color: white;
+        }
+        .button1:focus{
+          background-color:rgb(239,174,103);
+        }
+        .container {
+          height: 200px;
+          position: relative;
+          }
+        .center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+    </style>
+  </head>
+  <body class="QuestionBody">
+    <br>
+    <br>
+    <h1 class="Question">Q1. 오늘은 드디어 첫 녹화날!<br> 스튜디오에서의 나는?</h1>
+    <div class="container">
+      <div class="center">
+        <br><br>
+        <form action="question2.html" method="post">
+          <button class="button button1" name="mbti" value="1" >A. 하 너무 떨린다…. 잘 할수 있을까…? <br>말도 잘 못꺼낼거같은데…</button>
+          <button class="button button1" name="mbti" value="2">A. 첫 녹화 당당하게 도전~. 난 자신있어~<br> 사람들 앞에서 입좀 털어볼까?</button>
+          <input type="hidden" name="id" value="<?=$id?>">
+          <input type="hidden" name="rand" value="<?=$rand?>">
+        </form>
+          </div>
+      </div>
+      <br>
+  </body>
+</html>

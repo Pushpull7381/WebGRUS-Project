@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<?php
+session_start();
+include "connect.php";
+$rand = $_POST['rand'];
+$id=$_POST['id'];
+$mbti=$_POST['mbti'];
+
+$sql="SELECT * FROM topic WHERE id = '{$id}' and rand ='{$rand}';";
+$result=mysqli_query($conn, $sql);
+$row=mysqli_fetch_array($result);
+$cnt=$row['count'];
+
+if($cnt==4) {
+  if($mbti==1) {
+    $result=mysqli_query($conn,"update topic set Q5=1 where id='{$id}' and rand='{$rand}';");
+    $result=mysqli_query($conn,"update topic set N=N+1 where id='{$id}' and rand='{$rand}';");
+  }
+  else if ($mbti==2) {
+    $result=mysqli_query($conn,"update topic set Q5=2 where id='{$id}' and rand='{$rand}';");
+    $result=mysqli_query($conn,"update topic set S=S+1 where id='{$id}' and rand='{$rand}';");
+  }
+  $result=mysqli_query($conn,"update topic set count=count+1 where id='{$id}' and rand='{$rand}';");
+}
+?>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question6</title>
+    <style type="text/css">
+
+@font-face {
+     font-family:"NanumSquareRoundEB";
+     src:url("font/NanumSquareRoundEB.ttf") format("truetype");
+     font-style:normal;
+     font-weight:normal;
+     letter-spacing: 5px;
+}
+@font-face {
+     font-family:"nanumsquareroundb";
+     src:url("font/nanumsquareroundb.ttf") format("truetype");
+     font-style:normal;
+     font-weight:normal;
+}
+body {
+     font-family:NanumSquareRoundEB;
+     font-size:30px;
+}
+button {
+     font-family:nanumsquareroundb;
+}
+
+</style>
+    <style>
+    #firstPageBody{
+      background-color: black;
+      background-image: url("영화배경.png");
+      background-size: 100% 200%;
+    }
+    #firstPageH1{
+      margin-top: 100px;
+      margin-bottom: 100px;
+      color:white;
+      text-align: center;
+      font-size: 250%;
+    }
+    #colorChange{
+      color: rgb(239,174,103);
+    }
+    .form,
+    .name{
+      display: none;
+    }
+    .showing{
+      text-align: center;
+      display: block;
+    }
+    h4{
+      color:white;
+      font-size: 30px;
+    }
+    #firstPageA{
+      font-size: 150%;
+      text-decoration: none;
+      color:white;
+      background-color: rgb(239,174,103);
+      display: inline-block;
+      padding: 20px 60px;
+    }
+    .QuestionBody{
+      background-color:black;
+    }
+    .Question{
+      text-align: center;
+      margin-top: 50px;
+      color:white;
+      font-size:170%;
+      letter-spacing: 5px;
+    }
+    p{
+      text-align: center;
+      margin: 50px;
+    }
+    .NextButton{
+      font-size: 100%;
+      text-decoration: none;
+      color:white;
+      background-color: rgb(239,174,103);
+      display: inline-block;
+      padding: 15px 50px;
+    }
+    .button {
+      background-color: rgb(239,174,103);
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      font-size: 20px;
+      margin: 4px 2px;
+
+      cursor: pointer;
+      }
+      .button1 {
+        background-color: black;
+        color: white;
+        width: 500px;
+        height: 100px;
+        letter-spacing: 3px;
+        border: 2px solid rgb(239,174,103);
+        }
+      .button1:hover {
+          background-color: rgb(239,174,103);
+          color: white;
+        }
+        .button1:focus{
+          background-color:rgb(239,174,103);
+        }
+        .container {
+          height: 200px;
+          position: relative;
+          }
+        .center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+    </style>
+  </head>
+  <body class="QuestionBody">
+    <br>
+    <br>
+    <h1 class="Question">Q6. 배가고파서 맛집을 가려고 하는 당신!<br> 이 때, 택시를 타고 기사님에게 말한다. </h1>
+    <div class="container">
+      <div class="center">
+        <br><br>
+        <form action="question7.html" method="post">
+          <button class="button button1" name="mbti" value="1" >A. 쭉 내려가서 왼쪽으로 돌면 돼요 !</button>
+          <button class="button button1" name="mbti" value="2" >A. 100m 직진해서 편의점 끼고 <br>00건물 옆에 00식당으로 가주세요!</button>
+          <input type="hidden" name="id" value="<?=$id?>">
+          <input type="hidden" name="rand" value="<?=$rand?>">
+        </form>
+        </div>
+      </div>
+      <br>
+  </body>
+</html>

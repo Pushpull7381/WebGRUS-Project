@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MBTI</title>
+    <link rel="stylesheet" href="style1.css"/>
+    <style type="text/css">
+
+@font-face {
+     font-family:"NanumSquareRoundEB";
+     src:url("font/NanumSquareRoundEB.ttf") format("truetype");
+     font-style:normal;
+     font-weight:normal;
+     letter-spacing: 5px;
+}
+@font-face {
+     font-family:"nanumsquareroundb";
+     src:url("font/nanumsquareroundb.ttf") format("truetype");
+     font-style:normal;
+     font-weight:normal;
+}
+body {
+     font-family:NanumSquareRoundEB;
+     font-size:25px;
+}
+form {
+     font-family:NanumSquareRoundEB;
+}
+.fff {
+  text-align: center;
+}
+
+</style>
+  </head>
+  <body id="firstPageBody">
+    <h1 id="firstPageH1">당신의 MBTI와 <br><div id="colorChange"> 비슷한 캐릭터를</div>찾아보세요!</h1>
+    <div class="fff">
+      <form  action="question1.html" method="POST">
+        <input type="text" name="dlfma" placeholder="이름을 입력하세요." style="text-align:center; width:200px; height:30px; letter-spacing: 1px"/>
+        <br><br><br>
+        <input type="submit" value="START" id="firstPageA" >
+      </form>
+    </div>
+    <h4 class="js-greetings  greetings"></h4>
+    <script src="name.js"></script>
+  </body>
+</html>
