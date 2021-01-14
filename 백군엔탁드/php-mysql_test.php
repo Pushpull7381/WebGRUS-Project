@@ -8,13 +8,13 @@
 <?php
 echo "MySql 연결 테스트<br>";
  
-$db = mysqli_connect("localhost", "root", "59m3vk6974", "pika");
+$db = mysqli_connect("localhost", "root", "1111", "pika");
  
 if($db){
-    echo "connect : 성공<br>";
+    echo "connect : 성공이야~<br>";
 }
 else{
-    echo "disconnect : 실패<br>";
+    echo "disconnect : 실패야,,마음껏 좌절해<br>";
 }
  
 $result = mysqli_query($db, 'SELECT VERSION() as VERSION');
