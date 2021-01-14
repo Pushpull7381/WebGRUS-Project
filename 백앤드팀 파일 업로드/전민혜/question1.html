@@ -1,8 +1,13 @@
 <?php
 session_start();
 include "connect.php";
-$dlfma=$_POST['dlfma'];
 
+if($_POST['dlfma']==null) {
+  echo "<script>alert(\"이름 쓰셔야죠!!\");</script>";
+                              echo "<script>location.replace('index.html');</script>";
+			      }
+			      else {
+$dlfma=$_POST['dlfma'];
 $sql="INSERT INTO topic (E, I, N, S, F, T, P, J, name, time) VALUES('0', '0', '0', '0', '0', '0', '0', '0', '{$dlfma}', CURRENT_TIMESTAMP);";
 $result=mysqli_query($conn, $sql);
 $resultt=mysqli_query($conn,"SELECT * FROM topic WHERE name = '{$dlfma}' and rand='0';");
@@ -24,7 +29,7 @@ $row=mysqli_fetch_array($resultt);
 
 $N=$row['name'];
 $rand=$row['rand'];
-
+}
 ?>
 <html>
   <head>

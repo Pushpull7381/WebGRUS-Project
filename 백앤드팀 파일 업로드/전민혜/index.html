@@ -5,13 +5,16 @@
     <title>MBTI</title>
     <link rel="stylesheet" href="style1.css"/>
     <style type="text/css">
-
+    *{
+      height: auto;
+      margin: 0px;
+    }
 @font-face {
      font-family:"NanumSquareRoundEB";
      src:url("font/NanumSquareRoundEB.ttf") format("truetype");
      font-style:normal;
      font-weight:normal;
-     letter-spacing: 5px;
+     letter-spacing: 5vw;
 }
 @font-face {
      font-family:"nanumsquareroundb";
@@ -19,9 +22,19 @@
      font-style:normal;
      font-weight:normal;
 }
+#you{
+  color:white;
+  text-align: center;
+  padding-top: 10%;
+  font-size:5vw;
+}
+h1{
+  margin:0px;
+}
 body {
+	background-color: black;
      font-family:NanumSquareRoundEB;
-     font-size:25px;
+     font-size:1.5vw;
 }
 form {
      font-family:NanumSquareRoundEB;
@@ -29,19 +42,53 @@ form {
 .fff {
   text-align: center;
 }
+.button {
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   background-color: rgb(239,174,103);
+   color: white;
+   text-decoration: none;
+   display: block;
+   font-size: 2.5vw;
+   font-family:NanumSquareRoundEB;
+   cursor: pointer;
+   height: 10%;
+   padding:0%;
+   }
+   .button1 {
+     background-color: black;
+     color: white;
+     border-color:rgb(239,174,103);
+     border-width:0.2vw;
+     cursor: pointer;
+     float: left;
+
+   position: absolute;
+
+
+     }
+   .button1:hover {
+       background-color: rgb(239,174,103);
+       color: white;
+     }
+     .button1:focus{
+       background-color:rgb(239,174,103);
+     }
+
+
 
 </style>
   </head>
   <body id="firstPageBody">
     <h1 id="firstPageH1">당신의 MBTI와 <br><div id="colorChange"> 비슷한 캐릭터를</div>찾아보세요!</h1>
-    <div class="fff">
-      <form  action="question1.html" method="POST">
-        <input type="text" name="dlfma" placeholder="이름을 입력하세요." style="text-align:center; width:200px; height:30px; letter-spacing: 1px"/>
-        <br><br><br>
-        <input type="submit" value="START" id="firstPageA" >
-      </form>
-    </div>
-    <h4 class="js-greetings  greetings"></h4>
-    <script src="name.js"></script>
+      <div class="fff">
+        <form  action="question1.html" method="POST">
+          <input type="text" name="dlfma" placeholder="이름을 입력하세요." style="text-align:center; width:200px; height:30px; letter-spacing: 1px"/>
+          <br><br><br>
+          <input type="submit" value="START" id="firstPageA" >
+        </form>
+  </div>
   </body>
-</html>
+  </html>

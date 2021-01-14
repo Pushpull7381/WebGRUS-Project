@@ -1,8 +1,4 @@
-  #firstPageBody{
-    background-color: black;
-    background-image: url("영화배경.png");
-    background-size: 100% 200%;
-  }
+
   #firstPageH1{
     margin-top: 100px;
     margin-bottom: 100px;
@@ -82,7 +78,7 @@
         background-color:rgb(239,174,103);
       }
       .container {
-        height: 200px;
+        height: 100%;
         position: relative;
         }
       .center {

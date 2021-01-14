@@ -5,6 +5,7 @@ include "connect.php";
 $rand=$_POST['rand'];
 $id=$_POST['id'];
 $name=$_POST['name'];
+
 ?>
 <html lang="ko">
 	<head>
@@ -122,7 +123,7 @@ ul{padding:0;}
 		<div id="jb-wrap">
 			<div id="jb-image"><img src="Images/curtain.png" alt=""></div>
 			<div id="text-you">
-				<h1><?php echo "$name"; ?>씨와 비슷한<br> 캐릭터는..</h1>
+				<h1><?php echo $name; ?>씨와 비슷한<br> 캐릭터는..</h1>
 			</div>
 			<div id="mbti-image"><img src="Images/enfp.png" alt=""></div>
 			<div id="name"><h5>'안나(겨울왕국) & 지니(알라딘)'</h5></div>
@@ -147,6 +148,12 @@ ul{padding:0;}
 					<br>
           </div>
           <div id="sns-go">
+						<form action="compare.html" method="post">
+							<input type="hidden" name="rand" value="<?=$rand?>">
+							<input type="hidden" name="id" value="<?=$id?>">
+							<input type="hidden" name="name" value="<?=$name?>">
+							<button name="button">비교하기</button>
+						</form>
 						<br><br><br><br><br><br>
   <ul style="list-style:none;">
     <li style="list-style:none;">
