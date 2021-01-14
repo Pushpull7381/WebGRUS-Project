@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question3</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="QuestionBody">
+    <br>
+    <br>
+    <h1 class="Question">Q3. 연인과 길을 걷다 연인의 동창을 만났다!<br> 이때의 나는?</h1>
+
+    <form>
+      <div class="container">
+        <div class="center">
+          <br><br>
+          <script>
+            var check = false;
+            
+          </script>
+            <input type="button" class="button button1" value="A1. 마치 예전부터 알던 사이인 것처럼  같이 이야기를 나눈다." onclick='localStorage.setItem("question3", 1);check = true;'>
+          
+            <input type = "button" class="button button1" value="A2. 난 투명인간이야... 땅만 보고 대화가 끝나기를 기다린다." onclick='localStorage.setItem("question3", 2);check = true;'>
+          </div>
+        </div>
+        <br>
+       
+      <p><input class="NextButton" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href="question4.html"}'></p>
+      </form>
+
+   
+
+  
+  </body>
+</html>

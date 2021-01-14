@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question8</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="QuestionBody">
+    <br>
+    <br>
+    <h1 class="Question">Q8. 하... 이제 곧 내 생일인데?<br> 내 주변 지인들이 내 생일선물 챙겨줄때</h1>
+    
+
+
+    <form>
+      <div class="container">
+        <div class="center">
+          <br><br>
+          <script>
+            var check = false;
+            
+          </script>
+            <input type="button" class="button button1" value="A1. 직접 나에게 물어보고  나한테 필요한 것을 줬으면 좋겠다." onclick='localStorage.setItem("question8", 1);check = true;'>
+          
+            <input type = "button" class="button button1" value="A2. 마음이 느껴지기만 하면 어떤 선물이라도 OK!" onclick='localStorage.setItem("question8", 2);check = true;'>
+          </div>
+        </div>
+        <br>
+       
+      <p><input class="NextButton" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href="question9.html"}'></p>
+      </form>
+  </body>
+</html>

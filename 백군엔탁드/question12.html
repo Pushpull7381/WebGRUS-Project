@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question12</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <script>
+      function send(){
+        document.getElementById('question1').value = localStorage.getItem('question1');
+        document.getElementById('question2').value = localStorage.getItem('question2');
+        document.getElementById('question3').value = localStorage.getItem('question3');
+        document.getElementById('question4').value = localStorage.getItem('question4');
+        document.getElementById('question5').value = localStorage.getItem('question5');
+        document.getElementById('question6').value = localStorage.getItem('question6');
+        document.getElementById('question7').value = localStorage.getItem('question7');
+        document.getElementById('question8').value = localStorage.getItem('question8');
+        document.getElementById('question9').value = localStorage.getItem('question9');
+        document.getElementById('question10').value = localStorage.getItem('question10');
+        document.getElementById('question11').value = localStorage.getItem('question11');
+        document.getElementById('question12').value = localStorage.getItem('question12');
+        document.getElementById('name').value = localStorage.getItem('currentUser');
+        var form = document.getElementById('processing');
+        form.submit();
+      }
+    </script>
+
+
+  </head>
+  <body class="QuestionBody">
+    <br>
+    <br>
+    <h1 class="Question">Q12. 동료들과 함께 신년계획과 관련된 회의를 했다!<br> 회의를 할 때의 나는?</h1>
+    
+
+    
+      <div class="container">
+        <div class="center">
+          <br><br>
+          <script>
+            var check = false;
+            
+          </script>
+            <input type="button" class="button button1" value="A1. 이건 1월에 가고... 이건 꼭 6월에 가야돼!!" onclick='localStorage.setItem("question12", 1);check = true;'>
+          
+            <input type = "button" class="button button1" value="A2. 날짜 좋으면 그때 가면 되지~  뭘 미리 정해~" onclick='localStorage.setItem("question12", 2);check = true;'>
+          </div>
+        </div>
+        <br>
+       
+      <!-- <p><input class="NextButton" type="button" value="Finish" onclick='location.href="process.html"'></p> -->
+
+      <form action="./process.php" method="POST" id="processing" name="processing">
+       
+        <input type="hidden" value="" name="question1" id="question1">
+        <input type="hidden" value="" name="question2" id="question2">
+        <input type="hidden" value="" name="question3" id="question3">
+        <input type="hidden" value="" name="question4" id="question4">
+        <input type="hidden" value="" name="question5" id="question5">
+        <input type="hidden" value="" name="question6" id="question6">
+        <input type="hidden" value="" name="question7" id="question7">
+        <input type="hidden" value="" name="question8" id="question8">
+        <input type="hidden" value="" name="question9" id="question9">
+        <input type="hidden" value="" name="question10" id="question10">
+        <input type="hidden" value="" name="question11" id="question11">
+        <input type="hidden" value="" name="question12" id="question12">
+        <input type="hidden" value="" name="name" id ="name">
+      </form>
+
+
+     
+      
+
+      <input type="button" value="결과 보기" onclick='if(check != true){alert("please select the option");}else{send();}' class="NextButton center">
+      
+
+      
+
+      
+  </body>
+</html>

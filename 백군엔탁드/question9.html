@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question9</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="QuestionBody">
+    <br>
+    <br>
+    <h1 class="Question">Q9. 친구가 우울해서 화분을 샀다고 한다. <br>그때의 나는?</h1>
+  
+
+
+    <form>
+      <div class="container">
+        <div class="center">
+          <br><br>
+          <script>
+            var check = false;
+            
+          </script>
+            <input type="button" class="button button1" value="A1. 우울한데 왜 화분을 사..?" onclick='localStorage.setItem("question9", 1);check = true;'>
+          
+            <input type = "button" class="button button1" value="A2. 헐 왜 우울해!! 무슨 일 있어..?!" onclick='localStorage.setItem("question9", 2);check = true;'>
+          </div>
+        </div>
+        <br>
+       
+      <p><input class="NextButton" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href="question10.html"}'></p>
+      </form>
+
+  </body>
+</html>

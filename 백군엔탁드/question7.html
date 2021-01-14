@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question7</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="QuestionBody">
+    <br>
+    <br>
+    <h1 class="Question">Q7. 주말에 남자친구/여자친구가 <br> 3시간동안 연락이 없다...<br> 이때의 나는?</h1>
+    
+
+
+    <form>
+      <div class="container">
+        <div class="center">
+          <br><br>
+          <script>
+            var check = false;
+            
+          </script>
+            <input type="button" class="button button1" value="A1. 손가락이 부러졌나? 아니다 발가락인가?  수시로 핸드폰만 들여다본다." onclick='localStorage.setItem("question7", 1);check = true;'>
+          
+            <input type = "button" class="button button1" value="A2. 일이 바쁜가 보다~ 하면서  별로 신경을 쓰지 않는다." onclick='localStorage.setItem("question7", 2);check = true;'>
+          </div>
+        </div>
+        <br>
+       
+      <p><input class="NextButton" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href="question8.html"}'></p>
+      </form>
+  </body>
+</html>

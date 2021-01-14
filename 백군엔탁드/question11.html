@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question11</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="QuestionBody">
+    <br>
+    <br>
+    <h1 class="Question">Q11. 이제 곧 동료의 생일!<br> 동료의 선물을 준비할 때 나는?</h1>
+    
+
+    <form>
+      <div class="container">
+        <div class="center">
+          <br><br>
+          <script>
+            var check = false;
+            
+          </script>
+            <input type="button" class="button button1" value="A1. 계획이 다 있지!  미리 생각해서 사놓는다." onclick='localStorage.setItem("question11", 1);check = true;'>
+          
+            <input type = "button" class="button button1" value="A2. 헉! 맞다! 어떡해!! 생일 직전에 급박하게 산다." onclick='localStorage.setItem("question11", 2);check = true;'>
+          </div>
+        </div>
+        <br>
+       
+      <p><input class="NextButton" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href="question12.html"}'></p>
+      </form>
+
+
+  </body>
+</html>

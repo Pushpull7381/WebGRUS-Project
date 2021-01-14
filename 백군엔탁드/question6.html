@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question6</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="QuestionBody">
+    <br>
+    <br>
+    <h1 class="Question">Q6. 배가고파서 맛집을 가려고 하는 당신!<br> 이 때, 택시를 타고 기사님에게 말한다. </h1>
+
+
+    <form>
+      <div class="container">
+        <div class="center">
+          <br><br>
+          <script>
+            var check = false;
+            
+          </script>
+            <input type="button" class="button button1" value="A1. 쭉 내려가서 왼쪽으로 돌면 돼요 !" onclick='localStorage.setItem("question6", 1);check = true;'>
+          
+            <input type = "button" class="button button1" value="A2. 100m 직진해서 편의점 끼고  00건물 옆에 00식당으로 가주세요!" onclick='localStorage.setItem("question6", 2);check = true;'>
+          </div>
+        </div>
+        <br>
+       
+      <p><input class="NextButton" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href="question7.html"}'></p>
+      </form>
+
+
+  </body>
+</html>

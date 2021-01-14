@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question5</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="QuestionBody">
+    <br>
+    <br>
+    <h1 class="Question">Q5. 길을 가다가 처음 생긴 카페를 발견한 나! <br> 이때의 나는?</h1>
+    
+
+    <form>
+      <div class="container">
+        <div class="center">
+          <br><br>
+          <script>
+            var check = false;
+            
+          </script>
+            <input type="button" class="button button1" value="A1. 음.. 이 카페의 독특한 음료를 마셔볼까??" onclick='localStorage.setItem("question5", 1);check = true;'>
+          
+            <input type = "button" class="button button1" value="A2. 무난한 아메리카노나 마니자~" onclick='localStorage.setItem("question5", 2);check = true;'>
+          </div>
+        </div>
+        <br>
+       
+      <p><input class="NextButton" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href="question6.html"}'></p>
+      </form>
+
+  </body>
+</html>

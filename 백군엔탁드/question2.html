@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question2</title>
+    <link rel="stylesheet" href="./style.css">
+    
+  </head>
+  <body class="QuestionBody">
+    <br>
+    <br>
+    <h1 class="Question">Q2. 오늘은 간만에 스케쥴이 없는날!<br> 나는?</h1>
+    <form>
+    <div class="container">
+      <div class="center">
+        <br><br>
+        <script>
+          var check = false;
+          
+        </script>
+          <input type="button" class="button button1" value="A1. 편안한 내 공간에서 넷플릭스 정주행! 집콕방콕 뒹굴뒹굴" onclick='localStorage.setItem("question2", 1);check = true;'>
+        
+          <input type = "button" class="button button1" value="A2 무조건 약속 잡은 후에 집밖으로 탈출해서 지인들 만나기" onclick='localStorage.setItem("question2", 2);check = true;'>
+        </div>
+      </div>
+      <br>
+     
+    <p><input class="NextButton" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href="question3.html"}'></p>
+    </form>
+  </body>
+</html>

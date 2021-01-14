@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question1</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="QuestionBody">
+    <br>
+    <br>
+    <h1 class="Question">Q1. 오늘은 드디어 첫 녹화날!<br> 스튜디오에서의 나는?</h1>
+   
+
+    <form>
+      <div class="container">
+        <div class="center">
+          <br><br>
+          <script>
+            var check = false;
+            
+          </script>
+            <input type="button" class="button button1" value="A1. 하 너무 떨린다…. 잘 할수 있을까…? 말도 잘 못꺼낼거같은데…" onclick='localStorage.setItem("question1", 1);check = true;'>
+          
+            <input type = "button" class="button button1" value="A2. 첫 녹화 당당하게 도전~. 난 자신있어~ 사람들 앞에서 입좀 털어볼까?" onclick='localStorage.setItem("question1", 2);check = true;'>
+          </div>
+        </div>
+        <br>
+       
+      <p><input class="NextButton" type="button" value="Next" onclick='if(check != true){alert("please select the option");}else{location.href="question2.html"}'></p>
+      </form>
+  </body>
+</html>
