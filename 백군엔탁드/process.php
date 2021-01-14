@@ -4,7 +4,7 @@
 $conn = mysqli_connect(
     "localhost",
     "root",
-    "59m3vk6974",
+    "1111",
     "pika"
 );
 
