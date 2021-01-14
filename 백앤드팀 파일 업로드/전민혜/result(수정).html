@@ -5,11 +5,6 @@
     <title>MBTI</title>
     <link rel="stylesheet" href="style1.css"/>
     <style type="text/css">
-    *{
-      width: 100%;
-      height: auto;
-      margin: 0px;
-    }
 @font-face {
      font-family:"NanumSquareRoundEB";
      src:url("font/NanumSquareRoundEB.ttf") format("truetype");
@@ -23,40 +18,48 @@
      font-style:normal;
      font-weight:normal;
 }
-#firstPageBody{
-    border: 0px;
-    padding: 0px; 
-    width:100%;
-    min-height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: black;
-    background-image: url("영화배경2.png");
-  }
+
 #firstPageBody{
   position:relative;
 }
 #you{
   color:white;
   text-align: center;
-  padding-top: 10%;
+  position:absolute;
+   top:30%;
+   left:50%;
+   transform:translate(-50%,-50%);
+
   font-size:5vw;
 }
 h1{
   margin:0px;
 }
+
 body {
-	background-color: black;
-     font-family:NanumSquareRoundEB;
-     font-size:3vw;
+	  background-color: black;
+    font-family:NanumSquareRoundEB;
+    font-size:3vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 200%; /*뒤의 요소로 사진배경 길이 조절*/
+    background-color: black;
+    background-image: url("영화배경2.png");
 }
+body img{
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
 form {
      font-family:NanumSquareRoundEB;
 }
-.fff {
-  text-align: center;
-}
+
 .button {
    position: absolute;
    top:50%;
@@ -96,14 +99,19 @@ form {
      .button1:focus{
        background-color:rgb(239,174,103);
      }
+     .allall{
+       width:100%;
+       height:100%;
+     }
  
 
 
 </style>
   </head>
+  <div class="allall">
   <body id="firstPageBody">
     <div id="you">당신의 MBTI와 <br>비슷한 캐릭터는..</div>
-      <div class="fff">
+      <div>
 
     <?php
     session_start();
@@ -353,5 +361,6 @@ form {
 
     ?>
   </div>
+ </div>
   </body>
   </html>
