@@ -8,7 +8,7 @@ $type = $_POST['hidden_mbti'];
 $conn = mysqli_connect(
     'localhost',
     'root',
-    '59m3vk6974',
+    '1111',
     'pika');
 
 $sql = 'SELECT * FROM usr_input where mbti_type ="'.$type.'";';
