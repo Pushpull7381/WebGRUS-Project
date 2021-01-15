@@ -45,10 +45,23 @@ $name=$_POST['name'];
   vertical-align: middle;
   margin: 0px;
 }
+#dd {
+	position : absolute;
+	left : 50%;
+	transform : translate(-50%, -50%);
+	text-align: center;
+		font-family:NanumSquareRoundEB;
+			font-size: 80%;
+				text-decoration: none;
+					color:white;
+						background-color: rgb(255,181,67);
+							display: inline-block;
+								padding: 10px 90px;
+}
 #인물사진 {
   text-align: center;
   position: absolute;
-  top: -65%;
+  top: -117%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 65%;
@@ -132,9 +145,9 @@ ul{padding:0;}
         	<div id="인물사진">
 				<img src="Images/덤블도어&노승혜.png" alt="">
 			</div>
-        <h6 style="font-size:3vw;"><u>창의력이 뛰어나며, 강한 직관력으로 말없이 타인에게 영향력을 끼치는 당신!</u></h6>
+        <h6 style="font-size:2.5vw;"><u>창의력이 뛰어나며, 강한 직관력으로 말없이 타인에게 영향력을 끼치는 당신!</u></h6>
 				<ul>
-          <div align="left" style="font-size: 2.5vw;">
+          <div align="left" style="font-size: 1.5vw;">
           <li>인내심이 많고 통찰력과 직관력이 뛰어나며, 양심이 바르고 화합을 추구하는 사람이네요.</li>
           <br>
           <li>독창성과 내적 독립심이 강하며, 확고한 신념과 열정으로 자신의 영감을 구현시켜 나가기도 합니다.</li>
@@ -157,7 +170,8 @@ ul{padding:0;}
 							<input type="hidden" name="rand" value="<?=$rand?>">
 							<input type="hidden" name="id" value="<?=$id?>">
 							<input type="hidden" name="name" value="<?=$name?>">
-							<button name="button">비교하기</button>
+													<br><br><button id ="dd" name="button">다른 사람들이 고른 답변보기</button>
+
 						</form>
 						<br><br><br><br><br><br>
   <ul style="list-style:none;">

@@ -33,6 +33,20 @@ $name=$_POST['name'];
 				     font-family:nanumsquareroundb;
 				}
 
+				#dd {
+					                                        position : absolute;
+										                      left : 50%;
+												                            transform : translate(-50%, -50%);
+															                          text-align: center;
+																			                        font-family:NanumSquareRoundEB;
+																							                      font-size: 80%;
+																										                            text-decoration: none;
+																														                          color:white;
+																																		                        background-color: rgb(255,181,67);
+																																						                      display: inline-block;
+																																									                            padding: 10px 90px;
+																																													                                    }
+
 				</style>
         <style>
 #jb-wrap {
@@ -48,7 +62,7 @@ $name=$_POST['name'];
 #인물사진 {
 	text-align: center;
   position: absolute;
-  top: -61%;
+  top: -105%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 65%;
@@ -132,9 +146,9 @@ ul{padding:0;}
         	<div id="인물사진">
 				<img src="Images/잭&아이언맨.png" alt="">
 			</div>
-        <h6 style="font-size:3vw;"><u>타인이 믿는 이념이나 논쟁에 반향을 일으키면서,<br> 군중을 선동하는 선의의 비판자인 당신!</u></h6>
+        <h6 style="font-size:2.5vw;"><u>타인이 믿는 이념이나 논쟁에 반향을 일으키면서,<br> 군중을 선동하는 선의의 비판자인 당신!</u></h6>
 				<ul>
-          <div align="left" style="font-size: 2.5vw;">
+          <div align="left" style="font-size: 1.5vw;">
 					<br>
           <li>천부적으로 재치 있는 입담과 풍부한 지식을 통해 논쟁의 중심에 있는 사안과 관련한 이념을 증명해 보일 수 있어요.</li>
 					<br>
@@ -156,7 +170,9 @@ ul{padding:0;}
 							<input type="hidden" name="rand" value="<?=$rand?>">
 							<input type="hidden" name="id" value="<?=$id?>">
 							<input type="hidden" name="name" value="<?=$name?>">
-							<button name="button">비교하기</button>
+							<br><br>
+							<button id ="dd" name="button">다른 사람들이 고른 답변보기</button>
+
 						</form>
 						<br><br><br><br><br><br>
   <ul style="list-style:none;">

@@ -45,10 +45,23 @@ $name=$_POST['name'];
   vertical-align: middle;
   margin: 0px;
 }
+#dd {
+	position : absolute;
+	left : 50%;
+	transform : translate(-50%, -50%);
+	text-align: center;
+		font-family:NanumSquareRoundEB;
+			font-size: 80%;
+				text-decoration: none;
+					color:white;
+						background-color: rgb(255,181,67);
+							display: inline-block;
+								padding: 10px 90px;
+}
 #인물사진 {
   text-align: center;
   position: absolute;
-  top: -50%;
+  top: -95%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 65%;
@@ -132,9 +145,9 @@ ul{padding:0;}
         	<div id="인물사진">
 				<img src="Images/박거성&블랙위도우.png" alt="">
 			</div>
-        <h6 style="font-size:3vw;"><u>말이 별로 없고 어떤 일을 겪어도 표정으로 내색을 잘 하지 않는 당신!</u></h6>
+        <h6 style="font-size:2.5vw;"><u>말이 별로 없고 어떤 일을 겪어도 표정으로 내색을 잘 하지 않는 당신!</u></h6>
 				<ul>
-          <div align="left" style="font-size: 2.5vw;">
+          <div align="left" style="font-size: 1.5vw;">
             <li>조용하지만 가끔은 외향적으로 보일 만큼 필요에 따라 사교적인 편이에요.</li>
             <br>
             <li>절제된 호기심으로 상황을 파악하는 민감성과 객관적으로 인생을 관찰하는 타입이에요.</li>
@@ -163,7 +176,8 @@ ul{padding:0;}
 							<input type="hidden" name="rand" value="<?=$rand?>">
 							<input type="hidden" name="id" value="<?=$id?>">
 							<input type="hidden" name="name" value="<?=$name?>">
-							<button name="button">비교하기</button>
+													<br><br><button id ="dd" name="button">다른 사람들이 고른 답변보기</button>
+
 						</form>
 						<br><br><br><br><br><br>
   <ul style="list-style:none;">

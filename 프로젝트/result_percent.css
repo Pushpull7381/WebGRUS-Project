@@ -72,9 +72,9 @@ h1{
   padding: 20px;
   margin-bottom: 20px;
 }
-#answer1-1, #answer2-2, #answer3-2, #answer4-1, #answer5-2,
-#answer6-1,#answer7-1,#answer8-1,#answer9-2,#answer10-2,
-#answer11-2,#answer12-1
+#answer1_s, #answer2_s, #answer3_s, #answer4_s, #answer5_s,
+#answer6_s,#answer7_s,#answer8_s,#answer9_s,#answer10_s,
+#answer11_s,#answer12_s
 {
   color:#e65a5a;  /*선택된 answer에 색깔을 빨간색과 유사한 색깔로 변경*/
 }

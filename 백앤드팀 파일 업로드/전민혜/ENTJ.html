@@ -32,6 +32,19 @@ $name=$_POST['name'];
 				button {
 				     font-family:nanumsquareroundb;
 				}
+				#dd {
+					position : absolute;
+		      left : 50%;
+		      transform : translate(-50%, -50%);
+		      text-align: center;
+		      font-family:NanumSquareRoundEB;
+		      font-size: 80%;
+		      text-decoration: none;
+		      color:white;
+		      background-color: rgb(255,181,67);
+		      display: inline-block;
+		      padding: 10px 90px;
+				}
 
 				</style>
         <style>
@@ -48,7 +61,7 @@ $name=$_POST['name'];
 #인물사진 {
 	text-align: center;
   position: absolute;
-  top: -63%;
+  top: -120%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 65%;
@@ -132,9 +145,9 @@ ul{padding:0;}
         	<div id="인물사진">
 				<img src="Images/닥스&버즈.png" alt="">
 			</div>
-        <h6 style="font-size:3vw;"><u>천성적으로 타고난 리더인 당신!</u></h6>
+        <h6 style="font-size:2.5vw;"><u>천성적으로 타고난 리더인 당신!</u></h6>
 				<ul>
-          <div align="left" style="font-size: 2.5vw;">
+          <div align="left" style="font-size: 1.5vw;">
 					<li>다른 사람에게 의존하기보다는 믿는 건 자기 자신뿐이라 확신하는 완벽주의자 타입이에요.</li>
 					<br>
 					<li>진취적인 생각과 결정력, 그리고 냉철한 판단력으로 세운 목표 달성을 위해 가끔은 무모하리만치 이성적 사고를 하는 편이에요.</li>
@@ -153,11 +166,12 @@ ul{padding:0;}
 					<br>
           </div>
           <div id="sns-go">
+						<br><br>
 						<form action="compare.html" method="post">
 							<input type="hidden" name="rand" value="<?=$rand?>">
 							<input type="hidden" name="id" value="<?=$id?>">
 							<input type="hidden" name="name" value="<?=$name?>">
-							<button name="button">비교하기</button>
+							<button id ="dd" name="button">다른 사람들이 고른 답변보기</button>
 						</form>
 						<br><br><br><br><br><br>
   <ul style="list-style:none;">

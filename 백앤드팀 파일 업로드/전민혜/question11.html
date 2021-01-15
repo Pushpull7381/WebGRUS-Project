@@ -5,7 +5,9 @@ include "connect.php";
 $rand = $_POST['rand'];
 $id=$_POST['id'];
 $mbti=$_POST['mbti'];
-
+if($_POST['id']==null) {
+  echo "<script>location.replace('error.html');</script>";
+  }
 $sql="SELECT * FROM topic WHERE id = '{$id}' and rand ='{$rand}';";
 $result=mysqli_query($conn, $sql);
 $row=mysqli_fetch_array($result);

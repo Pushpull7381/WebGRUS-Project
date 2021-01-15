@@ -47,17 +47,12 @@ include "connect.php";
 $rand=$_POST['rand'];
 $id=$_POST['id'];
 $name=$_POST['name'];
-if($_POST['id']==null) {
-  echo "<script>location.replace('error.html');</script>";
-  }
+
 
 $sql="select * from topic where id='{$id}' and rand='{$rand}';";
 $resultt = mysqli_query($conn, $sql);
 $roww = mysqli_fetch_array($resultt);
 $mbti=$roww['mbti'];
-$count_total1 = mysqli_query($conn, "SELECT count(*) as mbti  FROM topic WHERE mbti = '{$mbti}';");
-$count_total2 = mysqli_fetch_array($count_total1);
-$count_total= $count_total2['mbti'];
 
 $sql="select * from topic where mbti='{$mbti}';";
 $result = mysqli_query($conn, $sql);
@@ -260,132 +255,132 @@ else {
 
 $sum1=$Q1_1+$Q1_2;
 if($roww['Q1']==1) {
-  $percent1_1=$Q1_1/$sum1*100;
+  $percent1_1=$Q1_1/$sum*100;
   $percent1_2=100-$percent1_1;
 }
 else {
-  $percent1_2=$Q1_2/$sum1*100;
+  $percent1_2=$Q1_2/$sum*100;
   $percent1_1=100-$percent1_2;
 }
 
 
 $sum2=$Q2_1+$Q2_2;
 if($roww['Q2']==1) {
-  $percent2_1=$Q2_1/$sum2*100;
+  $percent2_1=$Q2_1/$sum*100;
   $percent2_2=100-$percent2_1;
 }
 else {
-  $percent2_2=$Q2_2/$sum2*100;
+  $percent2_2=$Q2_2/$sum*100;
   $percent2_1=100-$percent2_2;
 }
 
 
 $sum3=$Q3_1+$Q3_2;
 if($roww['Q3']==1) {
-  $percent3_1=$Q3_1/$sum3*100;
+  $percent3_1=$Q3_1/$sum*100;
   $percent3_2=100-$percent3_1;
 }
 else {
-  $percent3_2=$Q3_2/$sum3*100;
+  $percent3_2=$Q3_2/$sum*100;
   $percent3_1=100-$percent3_2;
 }
 
 
 $sum4=$Q4_1+$Q4_2;
 if($roww['Q4']==1) {
-  $percent4_1=$Q4_1/$sum4*100;
+  $percent4_1=$Q4_1/$sum*100;
   $percent4_2=100-$percent4_1;
 }
 else {
-  $percent4_2=$Q4_2/$sum4*100;
+  $percent4_2=$Q4_2/$sum*100;
   $percent4_1=100-$percent4_2;
 }
 
 
 $sum5=$Q5_1+$Q5_2;
 if($roww['Q5']==1) {
-  $percent5_1=$Q5_1/$sum5*100;
+  $percent5_1=$Q5_1/$sum*100;
   $percent5_2=100-$percent5_1;
 }
 else {
-  $percent5_2=$Q5_2/$sum5*100;
+  $percent5_2=$Q5_2/$sum*100;
   $percent5_1=100-$percent5_2;
 }
 
 
 $sum6=$Q6_1+$Q6_2;
 if($roww['Q6']==1) {
-  $percent6_1=$Q6_1/$sum6*100;
+  $percent6_1=$Q6_1/$sum*100;
   $percent6_2=100-$percent6_1;
 }
 else {
-  $percent6_2=$Q6_2/$sum6*100;
+  $percent6_2=$Q6_2/$sum*100;
   $percent6_1=100-$percent6_2;
 }
 
 
 $sum7=$Q7_1+$Q7_2;
 if($roww['Q7']==1) {
-  $percent7_1=$Q7_1/$sum7*100;
+  $percent7_1=$Q7_1/$sum*100;
   $percent7_2=100-$percent7_1;
 }
 else {
-  $percent7_2=$Q7_2/$sum7*100;
+  $percent7_2=$Q7_2/$sum*100;
   $percent7_1=100-$percent7_2;
 }
 
 
 $sum8=$Q8_1+$Q8_2;
 if($roww['Q8']==1) {
-  $percent8_1=$Q8_1/$sum8*100;
+  $percent8_1=$Q8_1/$sum*100;
   $percent8_2=100-$percent8_1;
 }
 else {
-  $percent8_2=$Q8_2/$sum8*100;
+  $percent8_2=$Q8_2/$sum*100;
   $percent8_1=100-$percent8_2;
 }
 
 
 $sum9=$Q9_1+$Q9_2;
 if($roww['Q9']==1) {
-  $percent9_1=$Q9_1/$sum9*100;
+  $percent9_1=$Q9_1/$sum*100;
   $percent9_2=100-$percent9_1;
 }
 else {
-  $percent9_2=$Q9_2/$sum9*100;
+  $percent9_2=$Q9_2/$sum*100;
   $percent9_1=100-$percent9_2;
 }
 
 
 $sum10=$Q10_1+$Q10_2;
 if($roww['Q10']==1) {
-  $percent10_1=$Q10_1/$sum10*100;
+  $percent10_1=$Q10_1/$sum*100;
   $percent10_2=100-$percent10_1;
 }
 else {
-  $percent10_2=$Q10_2/$sum10*100;
+  $percent10_2=$Q10_2/$sum*100;
   $percent10_1=100-$percent10_2;
 }
 
 
 $sum11=$Q11_1+$Q11_2;
 if($roww['Q11']==1) {
-  $percent11_1=$Q11_1/$sum11*100;
+  $percent11_1=$Q11_1/$sum*100;
   $percent11_2=100-$percent11_1;
 }
 else {
-  $percent11_2=$Q11_2/$sum11*100;
+  $percent11_2=$Q11_2/$sum*100;
   $percent11_1=100-$percent11_2;
 }
 
 
 $sum12=$Q12_1+$Q12_2;
 if($roww['Q12']==1) {
-  $percent12_1=$Q12_1/$sum12*100;
+  $percent12_1=$Q12_1/$sum*100;
   $percent12_2=100-$percent12_1;
 }
 else {
-  $percent12_2=$Q12_2/$sum12*100;
+  $percent12_2=$Q12_2/$sum*100;
   $percent12_1=100-$percent12_2;
 }
 
@@ -397,257 +392,231 @@ else {
   <head>
     <meta charset="utf-8">
     <title>ResultPercent</title>
-
     <link rel="stylesheet" href="result_percent.css"/>
-
-    <style>
-      #firstPageA{
-      position: absolute;
-      text-align: center;
-      font-family:NanumSquareRoundEB;
-      font-size: 100%;
-      text-decoration: none;
-      color:white;
-      background-color: rgb(239,174,103);
-      display: inline-block;
-      padding: 10px 40px;
-      position : absolute;
-      left : 50%;
-      transform : translate(-50%, -50%);
-      }
-    </style>
-
   </head>
   <body>
-	  <h1><?php echo $name."씨와 동일한 ".$mbti."가 나온 분들은 ".$count_total."명 입니다." ;?></h1>
+    <h1><?php echo "다른 사람이 선택한 ".$name."씨의 "$mbti." 통계"</h1>
     <div class="Total">
-      <div class="question"><?php echo $Q1; ?></div>
-      <div id="<?php echo $answer1_1; ?>"class="<?php echo $answer1_1;?>"><?php echo $A1_1; ?></div>
+      <div class="question">Q1. 오늘은 드디어 첫 녹화날! 스튜디오에서의 나는? </div>
+      <div id="<?= $answer1 ?>"class="answer"> A1. 하 너무 떨린다…. 잘 할수 있을까…? 말도 잘 못꺼낼거같은데… </div>
       <div class="grid-container">
           <div class="graph stack1">
-            <span class= "rate" style="width:<?php echo $percent1_1;?>%"></span> <!--여기에서 width :75%를 원하는 값(변수)으로 변경해야함.-->
+            <span class= "rate" style="width:<?=$percent1_1?>%"></span> <!--여기에서 width :75%를 원하는 값(변수)으로 변경해야함.-->
           </div>
-	  <div class="percent"><?php echo sprintf("%.1f", $percent1_1);?>%</div>  <!--여기에서 75%를 원하는 값(변수처리)으로 변경해야함.-->
+          <div class="percent">75%</div>  <!--여기에서 75%를 원하는 값(변수처리)으로 변경해야함.-->
       </div>
-      <div id="<?php echo $answer1_2; ?>" class="answer"><?php echo $A1_2; ?></div>
+      <div id="<?= $answer1 ?>" class="answer">A2. 첫 녹화 당당하게 도전~. 난 자신있어~ 사람들 앞에서 입 좀 털어볼까?</div>
       <div class="grid-container">
         <div class="graph stack2">
           <span class= "rate" style="width:<?=$percent1_2?>%"></span> <!--여기에서 width :40%를 원하는 값(변수처리)으로 변경해야함.-->
         </div>
-	<div class="percent"><?php echo sprintf("%.1f", $percent1_2);?>%</div>  <!--여기에서 40%를 원하는 값(변수처리)으로 변경해야함.-->
+        <div class="percent">40%</div>  <!--여기에서 40%를 원하는 값(변수처리)으로 변경해야함.-->
       </div>
     </div>
 
     <div class="Total">
 
-      <div class="question"><?php echo $Q2; ?></div>
-      <div id="<?php echo $answer2_1; ?>"class="<?php echo $answer2_1;?>"><?php echo $A2_1; ?></div>
+      <div class="question">Q2. 오늘은 간만에 스케쥴이 없는날! 나는? </div>
+      <div id="<?= $answer2 ?>"class="answer"> A1. 편안한 내 공간에서 넷플릭스 정주행! 집콕방콕 뒹굴뒹굴 </div>
       <div class="grid-container">
           <div class="graph stack1">
-            <span class= "rate" style="width:<?php echo $percent2_1;?>%"></span>
+            <span class= "rate" style="width:75%"></span>
           </div>
-          <div class="percent"><?php echo sprintf("%.1f", $percent2_1);?>%</div>
+          <div class="percent">75%</div>
       </div>
-      <div id="<?php echo $answer2_2; ?>" class="answer"><?php echo $A2_2; ?></div>
+      <div id="<?= $answer2 ?>" class="answer">A2. 무조건 약속 잡은 후에 집밖으로 탈출해서 지인들 만나기</div>
       <div class="grid-container">
         <div class="graph stack2">
-          <span class= "rate" style="width:<?php echo $percent2_2;?>%"></span>
+          <span class= "rate" style="width:40%"></span>
         </div>
-        <div class="percent"><?php echo sprintf("%.1f", $percent2_2);?>%</div>
+        <div class="percent">40%</div>
       </div>
     </div>
 
     <div class="Total">
 
-      <div class="question"><?php echo $Q3; ?></div>
-      <div id="<?php echo $answer3_1; ?>"class="answer"><?php echo $A3_1; ?></div>
+      <div class="question">Q3. 연인과 길을 걷다 연인의 동창을 만났다! 이때의 나는? </div>
+      <div id="<?= $answer3 ?>"class="answer"> A1. 마치 예전부터 알던 사이인 것처럼  같이 이야기를 나눈다. </div>
       <div class="grid-container">
           <div class="graph stack1">
-            <span class= "rate" style="width:<?php echo $percent3_1;?>%"></span>
+            <span class= "rate" style="width:75%"></span>
           </div>
-          <div class="percent"><?php echo sprintf("%.1f", $percent3_1);?>%</div>
+          <div class="percent">75%</div>
       </div>
-      <div id="<?php echo $answer3_2; ?>" class="answer"><?php echo $A3_2; ?></div>
+      <div id="<?= $answer3 ?>" class="answer">A2. 난 투명인간이야... 땅만 보고 대화가 끝나기를 기다린다.</div>
       <div class="grid-container">
         <div class="graph stack2">
-          <span class= "rate" style="width:<?php echo $percent3_2;?>%"></span>
+          <span class= "rate" style="width:40%"></span>
         </div>
-        <div class="percent"><?php echo sprintf("%.1f", $percent3_2);?>%</div>
+        <div class="percent">40%</div>
       </div>
     </div>
 
     <div class="Total">
 
-      <div class="question"><?php echo $Q4; ?></div>
-      <div id="<?php echo $answer4_1; ?>"class="answer"><?php echo $A4_1; ?></div>
+      <div class="question">Q4. 오늘은 몸관리를 위해 운동을 하는 날! 운동을 끝낸 후 드는 생각은? </div>
+      <div id="<?= $answer4 ?>"class="answer"> A1. 오늘 5km나 뛰었네.  내일도 이만큼 도전!”이라고 생각하며  바로 씻으러 간다. </div>
       <div class="grid-container">
           <div class="graph stack1">
-            <span class= "rate" style="width:<?php echo $percent4_1;?>%"></span>
+            <span class= "rate" style="width:75%"></span>
           </div>
-          <div class="percent"><?php echo sprintf("%.1f", $percent4_1);?>%</div>
+          <div class="percent">75%</div>
       </div>
-
-      <div id="<?php echo $answer4_2; ?>" class="answer"><?php echo $A4_2; ?></div>
+      <div id="<?= $answer4 ?>" class="answer">A2. 하 이정도 땀이면 지방도 빠지고  근육도 좀 생긴거같은데? 복근이 생긴 것 같은 느낌적인 느낌~?</div>
       <div class="grid-container">
         <div class="graph stack2">
-          <span class= "rate" style="width:<?php echo $percent4_2;?>%"></span>
+          <span class= "rate" style="width:40%"></span>
         </div>
-        <div class="percent"><?php echo sprintf("%.1f", $percent4_2);?>%</div>
+        <div class="percent">40%</div>
       </div>
     </div>
 
     <div class="Total">
 
-      <div class="question"><?php echo $Q5; ?></div>
-      <div id="<?php echo $answer5_1; ?>" class="answer"><?php echo $A5_1; ?></div>
+      <div class="question">Q5. 길을 가다가 처음 생긴 카페를 발견한 나! 이때의 나는? </div>
+      <div id="<?= $answer5 ?>" class="answer"> A1. 음.. 이 카페의 독특한 음료를 마셔볼까? </div>
       <div class="grid-container">
           <div class="graph stack1">
-            <span class= "rate" style="width:<?php echo $percent5_1;?>%"></span>
+            <span class= "rate" style="width:75%"></span>
           </div>
-          <div class="percent"><?php echo sprintf("%.1f", $percent5_1);?>%</div>
+          <div class="percent">75%</div>
       </div>
-      <div id="<?php echo $answer5_2; ?>" class="answer"><?php echo $A5_2; ?></div>
+      <div id="<?= $answer5 ?>" class="answer">A2. 무난한 아메리카노나 마시자~</div>
       <div class="grid-container">
         <div class="graph stack2">
-          <span class= "rate" style="width:<?php echo $percent5_2;?>%"></span>
+          <span class= "rate" style="width:40%"></span>
         </div>
-        <div class="percent"><?php echo sprintf("%.1f", $percent5_2);?>%</div>
+        <div class="percent">40%</div>
       </div>
     </div>
 
     <div class="Total">
 
-      <div class="question"><?php echo $Q6; ?></div>
-      <div id="<?php echo $answer6_1; ?>"class="answer"><?php echo $A6_1; ?></div>
+      <div class="question">Q6. 배가 고파서 맛집을 가려고 하는 당신! 이 때, 택시를 타고 기사님에게 말한다. </div>
+      <div id="<?= $answer6 ?>"class="answer"> A1. 쭉 내려가서 왼쪽으로 돌면 돼요 ! </div>
       <div class="grid-container">
           <div class="graph stack1">
-            <span class= "rate" style="width:<?php echo $percent6_1;?>%"></span>
+            <span class= "rate" style="width:75%"></span>
           </div>
-          <div class="percent"><?php echo sprintf("%.1f", $percent6_1);?>%</div>
+          <div class="percent">75%</div>
       </div>
-      <div id="<?php echo $answer6_2; ?>" class="answer"><?php echo $A6_2; ?></div>
+      <div id="<?= $answer6 ?>" class="answer">A2. 100m 직진해서 편의점 끼고  00건물 옆에 00식당으로 가주세요!</div>
       <div class="grid-container">
         <div class="graph stack2">
-          <span class= "rate" style="width:<?php echo $percent6_2;?>%"></span>
+          <span class= "rate" style="width:40%"></span>
         </div>
-        <div class="percent"><?php echo sprintf("%.1f", $percent6_2);?>%</div>
+        <div class="percent">40%</div>
       </div>
     </div>
 
     <div class="Total">
 
-      <div class="question"><?php echo $Q7; ?></div>
-      <div id="<?php echo $answer7_1; ?>"class="answer"><?php echo $A7_1; ?></div>
+      <div class="question">Q7. 주말에 남자친구/여자친구가 3시간동안 연락이 없다... 이때의 나는? </div>
+      <div id="<?= $answer7 ?>"class="answer"> A1. 손가락이 부러졌나? 아니다 발가락인가? 수시로 핸드폰만 들여다본다. </div>
       <div class="grid-container">
           <div class="graph stack1">
-            <span class= "rate" style="width:<?php echo $percent7_1;?>%"></span>
+            <span class= "rate" style="width:75%"></span>
           </div>
-          <div class="percent"><?php echo sprintf("%.1f", $percent7_1);?>%</div>
+          <div class="percent">75%</div>
       </div>
-      <div id="<?php echo $answer7_2; ?>" class="answer"><?php echo $A7_2; ?></div>
+      <div id="<?= $answer7 ?>" class="answer">A2. 일이 바쁜가 보다~ 하면서 별로 신경을 쓰지 않는다.</div>
       <div class="grid-container">
         <div class="graph stack2">
-          <span class= "rate" style="width:<?php echo $percent7_2;?>%"></span>
+          <span class= "rate" style="width:40%"></span>
         </div>
-        <div class="percent"><?php echo sprintf("%.1f", $percent7_2);?>%</div>
+        <div class="percent">40%</div>
       </div>
     </div>
 
     <div class="Total">
-      <div class="question"><?php echo $Q8; ?></div>
-      <div id="<?php echo $answer8_1; ?>"class="answer"><?php echo $A8_1; ?></div>
+      <div class="question">Q8. 이제 곧 내 생일인데.. 내 주변 지인들이 내 생일선물 챙겨줄때? </div>
+      <div id="<?= $answer8 ?>"class="answer"> A1. 직접 나에게 물어보고 나한테 필요한 것을 줬으면 좋겠다.</div>
       <div class="grid-container">
           <div class="graph stack1">
-            <span class= "rate" style="width:<?php echo $percent8_1;?>%"></span>
+            <span class= "rate" style="width:75%"></span>
           </div>
-          <div class="percent"><?php echo sprintf("%.1f", $percent8_1);?>%</div>
+          <div class="percent">75%</div>
       </div>
-      <div id="<?php echo $answer8_2; ?>" class="answer"><?php echo $A8_2; ?></div>
+      <div id="<?= $answer8 ?>" class="answer">A2. 마음이 느껴지기만 하면 어떤 선물이라도 OK!</div>
       <div class="grid-container">
         <div class="graph stack2">
-          <span class= "rate" style="width:<?php echo $percent8_2;?>%"></span>
+          <span class= "rate" style="width:40%"></span>
         </div>
-        <div class="percent"><?php echo sprintf("%.1f", $percent8_2);?>%</div>
+        <div class="percent">40%</div>
       </div>
     </div>
 
     <div class="Total">
-      <div class="question"><?php echo $Q9; ?></div>
-      <div id="<?php echo $answer9_1; ?>" class="answer"><?php echo $A9_1; ?></div>
+      <div class="question">Q9. 친구가 우울해서 화분을 샀다고 한다. 그때의 나는? </div>
+      <div id="<?= $answer9 ?>" class="answer"> A1. 우울한데 왜 화분을 사..? </div>
       <div class="grid-container">
           <div class="graph stack1">
-            <span class= "rate" style="width:<?php echo $percent9_1;?>%"></span>
+            <span class= "rate" style="width:75%"></span>
           </div>
-          <div class="percent"><?php echo sprintf("%.1f", $percent9_1);?>%</div>
+          <div class="percent">75%</div>
       </div>
-      <div id="<?php echo $answer9_2; ?>" class="answer"><?php echo $A9_2; ?></div>
+      <div id="<?= $answer9 ?>" class="answer">A2. 헐 왜 우울해!! 무슨 일 있어..?!</div>
       <div class="grid-container">
         <div class="graph stack2">
-          <span class= "rate" style="width:<?php echo $percent9_2;?>%"></span>
+          <span class= "rate" style="width:40%"></span>
         </div>
-        <div class="percent"><?php echo sprintf("%.1f", $percent9_2);?>%</div>
+        <div class="percent">40%</div>
       </div>
     </div>
 
     <div class="Total">
-      <div class="question"><?php echo $Q10; ?></div>
-      <div id="<?php echo $answer10_1; ?>" class="answer"><?php echo $A10_1; ?></div>
+      <div class="question">Q10. 예능 프로그램에서 놀이동산에 온 당신 ! 놀이기구를 탈 때의 나는? </div>
+      <div id="<?= $answer10 ?>" class="answer"> A1. 오늘 이거 다섯 개는 꼭 타야돼! </div>
       <div class="grid-container">
           <div class="graph stack1">
-            <span class= "rate" style="width:<?php echo $percent10_1;?>%"></span>
+            <span class= "rate" style="width:75%"></span>
           </div>
-          <div class="percent"><?php echo sprintf("%.1f", $percent10_1);?>%</div>
+          <div class="percent">75%</div>
       </div>
-      <div id="<?php echo $answer10_2; ?>" class="answer"><?php echo $A10_2; ?></div>
+      <div id="<?= $answer10 ?>" class="answer">A2. 오, 저거 재밌어 보인다! 일단 보이는 것부터 탄다.</div>
       <div class="grid-container">
         <div class="graph stack2">
-          <span class= "rate" style="width:<?php echo $percent10_2;?>%"></span>
+          <span class= "rate" style="width:40%"></span>
         </div>
-        <div class="percent"><?php echo sprintf("%.1f", $percent10_2);?>%</div>
+        <div class="percent">40%</div>
       </div>
     </div>
 
     <div class="Total">
-      <div class="question"><?php echo $Q11; ?></div>
-      <div id="<?php echo $answer11_1; ?>" class="answer"><?php echo $A11_1; ?></div>
+      <div class="question">Q11. 이제 곧 동료의 생일! 동료의 선물을 준비할 때 나는? </div>
+      <div id="<?= $answer11 ?>" class="answer"> A1. 계획이 다 있지! 미리 생각해서 사놓는다. </div>
       <div class="grid-container">
           <div class="graph stack1">
-            <span class= "rate" style="width:<?php echo $percent11_1;?>%"></span>
+            <span class= "rate" style="width:75%"></span>
           </div>
-          <div class="percent"><?php echo sprintf("%.1f", $percent11_1);?>%</div>
+          <div class="percent">75%</div>
       </div>
-      <div id="<?php echo $answer11_2; ?>" class="answer"><?php echo $A11_2; ?></div>
+      <div id="<?= $answer11 ?>" class="answer">A2. 헉! 맞다! 어떡해!! 생일 직전에 급박하게 산다.</div>
       <div class="grid-container">
         <div class="graph stack2">
-          <span class= "rate" style="width:<?php echo $percent11_2;?>%"></span>
+          <span class= "rate" style="width:40%"></span>
         </div>
-        <div class="percent"><?php echo sprintf("%.1f", $percent11_2);?>%</div>
+        <div class="percent">40%</div>
       </div>
     </div>
 
     <div class="Total">
-      <div class="question"><?php echo $Q12; ?></div>
-      <div id="<?php echo $answer12_1; ?>"class="answer"><?php echo $A12_1; ?></div>
+      <div class="question">Q12. 동료들과 함께 신년계획과 관련된 회의를 했다! 회의를 할 때의 나는? </div>
+      <div id="<?= $answer12 ?>"class="answer"> A1. 이건 1월에 가고... 이건 꼭 6월에 가야돼!! </div>
       <div class="grid-container">
           <div class="graph stack1">
-            <span class= "rate" style="width:<?php echo $percent12_1;?>%"></span>
+            <span class= "rate" style="width:75%"></span>
           </div>
-          <div class="percent"><?php echo sprintf("%.1f", $percent12_1);?>%</div>
+          <div class="percent">75%</div>
       </div>
-      <div id="<?php echo $answer12_2; ?>" class="answer"><?php echo $A12_2; ?></div>
+      <div id="<?= $answer ?>" class="answer">A2. 날짜 좋으면 그때 가면 되지~ 뭘 미리 정해~</div>
       <div class="grid-container">
         <div class="graph stack2">
-          <span class= "rate" style="width:<?php echo $percent12_2;?>%"></span>
+          <span class= "rate" style="width:40%"></span>
         </div>
-        <div class="percent"><?php echo sprintf("%.1f", $percent12_2);?>%</div>
+        <div class="percent">40%</div>
       </div>
     </div>
-
-    <form action="index.html" method="post">
-      <button class="button button1" id="firstPageA" name="return" >다시 테스트하기</button>
-    </form>
-
-
 
   </body>
 </html>

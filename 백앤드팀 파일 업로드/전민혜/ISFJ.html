@@ -48,10 +48,23 @@ $name=$_POST['name'];
 #인물사진 {
   text-align: center;
   position: absolute;
-  top: -54%;
+  top: -103%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 65%;
+}
+#dd {
+	position : absolute;
+	left : 50%;
+	transform : translate(-50%, -50%);
+	text-align: center;
+		font-family:NanumSquareRoundEB;
+			font-size: 80%;
+				text-decoration: none;
+					color:white;
+						background-color: rgb(255,181,67);
+							display: inline-block;
+								padding: 10px 90px;
 }
 #mbti-image {
   text-align: center;
@@ -132,9 +145,9 @@ ul{padding:0;}
         	<div id="인물사진">
 				<img src="Images/캡아&천서진.png" alt="">
 			</div>
-        <h6 style="font-size:3vw;"><u>자기주장과 가치관은 뚜렷한 편이나, 끝까지 주장은 하지 못하고 다수 의견에 따르는 당신!</u></h6>
+        <h6 style="font-size:2.5vw;"><u>자기주장과 가치관은 뚜렷한 편이나, 끝까지 주장은 하지 못하고 다수 의견에 따르는 당신!</u></h6>
 				<ul>
-          <div align="left" style="font-size: 2.5vw;">
+          <div align="left" style="font-size: 1.5vw;">
             <li>단체 활동을 별로 안 좋아하고, 혼자서 할 수 있는 일을 더 선호하는 타입이에요.</li>
             <br>
             <li>맡겨진 일에는 의무를 다하는데, 노력형으로 꾸준히 성실하게 해나가는 성격이에요.</li>
@@ -159,7 +172,8 @@ ul{padding:0;}
 							<input type="hidden" name="rand" value="<?=$rand?>">
 							<input type="hidden" name="id" value="<?=$id?>">
 							<input type="hidden" name="name" value="<?=$name?>">
-							<button name="button">비교하기</button>
+													<br><br><button id ="dd" name="button">다른 사람들이 고른 답변보기</button>
+
 						</form>
 						<br><br><br><br><br><br>
   <ul style="list-style:none;">

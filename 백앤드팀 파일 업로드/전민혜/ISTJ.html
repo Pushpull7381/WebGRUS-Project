@@ -45,10 +45,23 @@ $name=$_POST['name'];
   vertical-align: middle;
   margin: 0px;
 }
+#dd {
+	position : absolute;
+	left : 50%;
+	transform : translate(-50%, -50%);
+	text-align: center;
+		font-family:NanumSquareRoundEB;
+			font-size: 80%;
+				text-decoration: none;
+					color:white;
+						background-color: rgb(255,181,67);
+							display: inline-block;
+								padding: 10px 90px;
+}
 #인물사진 {
   text-align: center;
   position: absolute;
-  top: -54%;
+  top: -95%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 65%;
@@ -132,9 +145,9 @@ ul{padding:0;}
         	<div id="인물사진">
 				<img src="Images/엘사&장겨울.png" alt="">
 			</div>
-        <h6 style="font-size:3vw;"><u>가끔은 세세한 일에 고집을 부리지만, 아주 확고하고 분별력 있는 업무 처리능력을 가진 당신!</u></h6>
+        <h6 style="font-size:2.5vw;"><u>가끔은 세세한 일에 고집을 부리지만, 아주 확고하고 분별력 있는 업무 처리능력을 가진 당신!</u></h6>
 				<ul>
-          <div align="left" style="font-size: 2.5vw;">
+          <div align="left" style="font-size: 1.5vw;">
             <li>현실감각도 뛰어나고, 조직적이며 누구보다 뛰어나게 침착해요. 그리고 정확성과 조직력을 발휘하는 분야의 일을 선호하는 성격이에요.</li>
             <br>
             <li>틈이 보이지 않고 불평불만 없이 일을 처리하는 유형이에요. 하지만 참고 참았다가 확 터트리는 경향이 있어요.</li>
@@ -159,7 +172,8 @@ ul{padding:0;}
 							<input type="hidden" name="rand" value="<?=$rand?>">
 							<input type="hidden" name="id" value="<?=$id?>">
 							<input type="hidden" name="name" value="<?=$name?>">
-							<button name="button">비교하기</button>
+													<br><br><button id ="dd" name="button">다른 사람들이 고른 답변보기</button>
+
 						</form>
 						<br><br><br><br><br><br>
   <ul style="list-style:none;">

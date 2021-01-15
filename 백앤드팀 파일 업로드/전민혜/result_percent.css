@@ -1,0 +1,81 @@
+@font-face {
+   font-family:"NanumSquareRoundEB";
+   src:url("font/NanumSquareRoundEB.ttf") format("truetype");
+   font-style:normal;
+   font-weight:normal;
+   letter-spacing: 5px;
+ }
+ @font-face {
+   font-family:"nanumsquareroundb";
+   src:url("font/nanumsquareroundb.ttf") format("truetype");
+   font-style:normal;
+   font-weight:normal;
+  }
+  body{
+    padding: 50px;
+    background-color: #1C1C1C;
+  }
+  .graph{
+    height:40px;
+    background: #ccc;
+    border-radius: 40px;
+    margin: 0 0 30px;
+  }
+  .graph span{
+    display: block;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    background: #fff59e;
+    border-radius: 40px;
+    box-sizing: border-box;
+    color:black;
+    opacity: 0.7;
+  }
+  .graph.stack1 span{animation: stack1 2s 1;}
+  .graph.stack2 span{animation: stack2 2s 1;}
+  @keyframes stack1 {
+    0%{width:0; color:rgb(0,0,0,0); }
+    40%{color:rgb(0,0,0,1);}
+    100%{width: 75% color:rgb(0,0,0,1);}  /*여기에서 width :75%를 원하는 값으로 변경해야함.*/
+  }
+  @keyframes stack2 {
+    0%{width:0; color:rgb(0,0,0,0); }
+    40%{color:rgb(0,0,0,1);}
+    100%{width: 40% color:rgb(0,0,0,1);}  /*여기에서 width :40%를 원하는 값으로 변경해야함.*/
+  } /*그래프가 맨왼쪽에서 지정한 퍼센트까지 올라가는 애니메이션*/
+  .question{
+    font-family:NanumSquareRoundEB;
+    color:#D8D8D8;
+    font-size: 130%;
+    margin-bottom: 20px;
+  }
+.grid-container{
+  display: grid;
+  grid-template-columns:  10fr 1fr;
+}
+.percent{
+  color: #D8D8D8;
+  margin-left: 20px;
+  margin-top: 8px;
+}
+h1{
+  font-family:NanumSquareRoundEB;
+  color:#D8D8D8;
+}
+.answer{
+  font-family:nanumsquareroundb;
+  color: #424242;
+  padding-bottom: 10px;
+}
+.Total{
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#answer1_s, #answer2_s, #answer3_s, #answer4_s, #answer5_s,
+#answer6_s,#answer7_s,#answer8_s,#answer9_s,#answer10_s,
+#answer11_s,#answer12_s
+{
+  color:#e65a5a;  /*선택된 answer에 색깔을 빨간색과 유사한 색깔로 변경*/
+}
