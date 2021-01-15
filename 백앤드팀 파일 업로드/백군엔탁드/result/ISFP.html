@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+        <title>MBTI result</title>
+				<style type="text/css">
+
+				@font-face {
+				     font-family:"NanumSquareRoundEB";
+				     src:url("font/NanumSquareRoundEB.ttf") format("truetype");
+				     font-style:normal;
+				     font-weight:normal;
+				}
+				@font-face {
+				     font-family:"nanumsquareroundb";
+				     src:url("font/nanumsquareroundb.ttf") format("truetype");
+				     font-style:normal;
+				     font-weight:normal;
+				}
+				body {
+				     font-family:NanumSquareRoundEB;
+
+				}
+				button {
+				     font-family:nanumsquareroundb;
+				}
+
+				</style>
+        <style>
+#jb-wrap {
+  width: 100%;
+  margin: 0px auto;
+  position: relative;
+}
+#jb-wrap img {
+  width: 100%;
+  vertical-align: middle;
+  margin: 0px;
+}
+#인물사진 {
+  text-align: center;
+  position: absolute;
+  top: -56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+}
+#mbti-image {
+  text-align: center;
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+}
+#text-you {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 30%;
+  font-size: 2vw;
+}
+body {
+  margin: 0px;
+}
+h2 {
+  color: white;
+}
+#writing {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 135%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80%;
+  font-size: 2vw;
+}
+#name {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80%;
+  font-size: 3vw;
+}
+#tag {
+  color: gold;
+  text-align: center;
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80%;
+  font-size: 3.5vw;
+}
+#sns-go {text-align:center; padding: 20px 0;
+position: absolute;
+width: 100%;
+height: 100%;
+}
+#sns-go li {display:inline-block; margin: 0 5px;
+width:15%; }
+#sns-go li img {border-radius:10%;width:70%;
+}
+ul{padding:0;}
+</style>
+	</head>
+	<body class="ddd" bgcolor='black'>
+		<div id="jb-wrap">
+			<div id="jb-image"><img src="Images/curtain.png" alt=""></div>
+			<div id="text-you">
+				<h1>당신과 비슷한<br> 캐릭터는..</h1>
+			</div>
+			<div id="mbti-image"><img src="Images/isfp.png" alt=""></div>
+			<div id="name"><h5>'해리 포터(해리포터) & 지미유(놀면 뭐하니)'</h5></div>
+			<div id="tag"><h5>#과묵 #헌신 #포용력 #이해력 #겸손 #공감</h5></div>
+			<div id="writing">
+        	<div id="인물사진">
+				<img src="Images/해리&지미유.png" alt="">
+			</div>
+        <h6 style="font-size:3vw;"><u>연민의 정이 많고, 타인의 괴로움과 고통에 특히 민감한 당신!</u></h6>
+				<ul>
+          <div align="left" style="font-size: 2.5vw;">
+            <li>남을 잘 믿고 사람을 잘 의심하지 않는 성격입니다.</li>
+            <br>
+            <li>뒤로 물러나서 조용히 드러나지 않게 다른 사람을 도와주는 성격이며, 매 순간 조화롭게 살려고 하는 유형이에요.</li>
+            <br>
+            <li>감수성이 매우 풍부하지만, 보통 감상에 젖은 내용을 겉으로 드러내지는 않는 편이에요.</li>
+            <br>
+            <li>미적인 감각이 있어, 감각적인 경험들에 조화를 이루며 예술에서 자연스러운 재능을 가지고 있어요.</li>
+            <br>
+            <li>관심의 집중을 받는 것을 좋아하지 않아요. 그래서 사람들이 많은 곳에서 공개적으로 이야기하는 포지션에 있는 것을 싫어해요.</li>
+            <br>
+            <li>싸울 때는 감정이 앞서는 성격이며, 의외의 면에서 충동적인 면을 보이기도 해요.</li>
+            <br>
+            <li>틀이나 규칙에 묶이는 것과 경쟁하는 분위기를 싫어해요.</li>
+            <br>
+            <li>결정력과 추진력은 부족하며, 결단력 또한 강하지 않아 끊고 맺지도 못하는군요.</li>
+            <br>
+            <li>갈등과 직면하는 상황을 불편해하고, 문제의 근원을 찾기보다는 현재 발생한 상황에만 초점을 두는 경향이 있어요.</li>
+            <br>
+          </div>
+          <div id="sns-go">
+            <br><br><br><br><br><br>
+            
+
+            <script>
+              
+              function sendit(){
+                
+                document.getElementById('hidden_mbti').value = "ISFP";
+                document.getElementById('send_type').submit();
+              }
+            </script>
+
+
+            <form id='send_type' method="post" action="statistic.php">
+              <input type="hidden" id="hidden_mbti" name="hidden_mbti" value="">
+              <input type="button" value="통계 보기" class="NextButton center" onclick="sendit();">
+            </form>
+
+
+
+  <ul style="list-style:none;">
+    <li style="list-style:none;">
+      <a href="#" onclick="javascript:window.open('http://share.naver.com/web/shareView.nhn?url=' +encodeURIComponent(document.URL)+'&title='+encodeURIComponent(document.title), 'naversharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="Share on Naver" ><img src="./Images/네이버.png" width="40" alt="네이버 블로그 공유하기"></a>
+    </li>
+    <li>
+      <a href="#" onclick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=' +encodeURIComponent(document.URL)+'&t='+encodeURIComponent(document.title), 'facebooksharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="Share on Facebook" ><img src="./Images/페이스북.png" width="40" alt="페이스북 공유하기"></a>
+    </li>
+    <li>
+      <a href="#" onclick="javascript:window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' +encodeURIComponent(document.URL)+'%20-%20'+encodeURIComponent(document.title), 'twittersharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="Share on Twitter" ><img src="./Images/트위터.png" width="40" alt="트위터 공유하기"></a>
+    </li>
+    <li>
+      <a href="#" onclick="javascript:window.open('https://plus.google.com/share?url=' +encodeURIComponent(document.URL), 'googleplussharedialog','menubar=no,toolbar=no,resizable=yes, scrollbars=yes,height=350,width=600');return false;" target="_blank" alt="Share on Google+"><img src="./Images/구글.png" width="40" alt="구글 플러스 공유하기"></a>
+    </li>
+    <li>
+      <a href="#" onclick="javascript:window.open('https://story.kakao.com/s/share?url=' +encodeURIComponent(document.URL), 'kakaostorysharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes, height=400,width=600');return false;" target="_blank" alt="Share on kakaostory"><img src="./Images/카카오스토리.png" width="40" alt="카카오스토리 공유하기"></a>
+    </li>
+  </ul>
+</div>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+</html>

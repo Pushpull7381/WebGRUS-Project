@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+        <title>MBTI result</title>
+				<style type="text/css">
+
+				@font-face {
+				     font-family:"NanumSquareRoundEB";
+				     src:url("font/NanumSquareRoundEB.ttf") format("truetype");
+				     font-style:normal;
+				     font-weight:normal;
+				}
+				@font-face {
+				     font-family:"nanumsquareroundb";
+				     src:url("font/nanumsquareroundb.ttf") format("truetype");
+				     font-style:normal;
+				     font-weight:normal;
+				}
+				body {
+				     font-family:NanumSquareRoundEB;
+
+				}
+				button {
+				     font-family:nanumsquareroundb;
+				}
+
+				</style>
+        <style>
+#jb-wrap {
+  width: 100%;
+  margin: 0px auto;
+  position: relative;
+}
+#jb-wrap img {
+  width: 100%;
+  vertical-align: middle;
+  margin: 0px;
+}
+#인물사진 {
+	text-align: center;
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+}
+#mbti-image {
+  text-align: center;
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+}
+#text-you {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 30%;
+  font-size: 2vw;
+}
+body {
+  margin: 0px;
+}
+h2 {
+  color: white;
+}
+#writing {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 135%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80%;
+  font-size: 2vw;
+}
+#name {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80%;
+  font-size: 3vw;
+}
+#tag {
+  color: gold;
+  text-align: center;
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80%;
+  font-size: 3.5vw;
+}
+#sns-go {text-align:center; padding: 20px 0;
+position: absolute;
+width: 100%;
+height: 100%;
+}
+#sns-go li {display:inline-block; margin: 0 5px;
+width:15%; }
+#sns-go li img {border-radius:10%;width:70%;
+}
+ul{padding:0;}
+</style>
+	</head>
+	<body class="ddd" bgcolor='black'>
+		<div id="jb-wrap">
+			<div id="jb-image"><img src="Images/curtain.png" alt=""></div>
+			<div id="text-you">
+				<h1>당신과 비슷한<br> 캐릭터는..</h1>
+			</div>
+			<div id="mbti-image"><img src="Images/esfj.png" alt=""></div>
+			<div id="name"><h5>'이도화(어쩌다 발견한 하루) & 서세이(왕좌의 게임)''</h5></div>
+			<div id="tag"><h5>#관심이 많은 #타고난 협력자 #동료애 #능동적 #친절</h5></div>
+			<div id="writing">
+        	<div id="인물사진">
+				<img src="Images/이도화.png" alt="">
+			</div>
+        <h6 style="font-size:3vw;"><u>연애를 시작할 때에 그 사람을 철저하게 알아보고 <br>괜찮은 사람이다 싶으면 연애를 시작하는 당신!</u></h6>
+				<ul>
+          <div align="left" style="font-size: 2.5vw;">
+					<br>
+          <li>신나고 재밌는 성격이며, 늘 즐거움을 추구해요.</li><br>
+					<li>준비성이 철저하며, 참을성이 많고 타인을 잘 돕는 성격이에요.</li><br>
+					<li>타인의 인정을 받는 것에 아주 민감하며, 집단의 일이나 목적을 개인의 이익보다 먼저 생각해요.</li><br>
+					<li>조화와 균형을 중요시 생각하고, 싫은 소리를 하기 싫어해요. </li><br>
+					<li>자기주장이 강하지 않고, 진지한 이야기보다 가벼운 이야기를 주로 해요.</li><br>
+					<li>사람들과의 상호 관계를 통해서 힘을 얻는 스타일이라서, 안 좋은 일이 생기면 누구든 만나야 풀리는 성격이에요.</li><br>
+          <li>한 사람만 만나는 것보다는 무리 지어서 만나는 것을 좋아하는 타입이에요.</li><br>
+          <li>즉흥적으로 행동을 한 경우에 금방 후회하는 경우가 많아요.</li><br>
+          <li>한번 싫어졌다고 생각이 되면, 철저하게 쳐내는 편이에요.</li>
+					<br>
+          </div>
+          <div id="sns-go">
+            <br><br><br><br><br><br>
+            
+
+            <script>
+              
+              function sendit(){
+                document.getElementById('hidden_mbti').value = "ENFJ";
+                document.getElementById('send_type').submit();
+              }
+            </script>
+
+
+            <form id='send_type' method="post" action="statistic.php">
+              <input type="hidden" id="hidden_mbti" name="hidden_mbti" value="">
+              <input type="button" value="통계 보기" class="NextButton center" onclick="sendit();">
+            </form>
+
+
+
+  <ul style="list-style:none;">
+    <li style="list-style:none;">
+      <a href="#" onclick="javascript:window.open('http://share.naver.com/web/shareView.nhn?url=' +encodeURIComponent(document.URL)+'&title='+encodeURIComponent(document.title), 'naversharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="Share on Naver" ><img src="./Images/네이버.png" width="40" alt="네이버 블로그 공유하기"></a>
+    </li>
+    <li>
+      <a href="#" onclick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=' +encodeURIComponent(document.URL)+'&t='+encodeURIComponent(document.title), 'facebooksharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="Share on Facebook" ><img src="./Images/페이스북.png" width="40" alt="페이스북 공유하기"></a>
+    </li>
+    <li>
+      <a href="#" onclick="javascript:window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' +encodeURIComponent(document.URL)+'%20-%20'+encodeURIComponent(document.title), 'twittersharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="Share on Twitter" ><img src="./Images/트위터.png" width="40" alt="트위터 공유하기"></a>
+    </li>
+    <li>
+      <a href="#" onclick="javascript:window.open('https://plus.google.com/share?url=' +encodeURIComponent(document.URL), 'googleplussharedialog','menubar=no,toolbar=no,resizable=yes, scrollbars=yes,height=350,width=600');return false;" target="_blank" alt="Share on Google+"><img src="./Images/구글.png" width="40" alt="구글 플러스 공유하기"></a>
+    </li>
+    <li>
+      <a href="#" onclick="javascript:window.open('https://story.kakao.com/s/share?url=' +encodeURIComponent(document.URL), 'kakaostorysharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes, height=400,width=600');return false;" target="_blank" alt="Share on kakaostory"><img src="./Images/카카오스토리.png" width="40" alt="카카오스토리 공유하기"></a>
+    </li>
+  </ul>
+</div>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+</html>
